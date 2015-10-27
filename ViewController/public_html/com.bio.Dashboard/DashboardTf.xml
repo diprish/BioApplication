@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="DashboardTf">
+    <default-activity>dashboardRt</default-activity>
+    <router id="dashboardRt">
+      <default-outcome>toDashFinancials</default-outcome>
+    </router>
+    <task-flow-call id="DashFinancialsTf">
+      <task-flow-reference>
+        <document>/com.bio.DashboardFinancials/DashFinancialsTf.xml</document>
+        <id>DashFinancialsTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="DashManufacturingTf">
+      <task-flow-reference>
+        <document>/com.bio.DashboardManufacturing/DashManufacturingTf.xml</document>
+        <id>DashManufacturingTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="DashPurchasingTf">
+      <task-flow-reference>
+        <document>/com.bio.DashboardPurchasing/DashPurchasingTf.xml</document>
+        <id>DashPurchasingTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="DashSalesTf">
+      <task-flow-reference>
+        <document>/com.bio.DashboardSales/DashSalesTf.xml</document>
+        <id>DashSalesTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>dashboardRt</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>toDashSales</from-outcome>
+        <to-activity-id>DashSalesTf</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>toDashPurchasing</from-outcome>
+        <to-activity-id>DashPurchasingTf</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>toDashManufacturing</from-outcome>
+        <to-activity-id>DashManufacturingTf</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>toDashFinancials</from-outcome>
+        <to-activity-id>DashFinancialsTf</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>

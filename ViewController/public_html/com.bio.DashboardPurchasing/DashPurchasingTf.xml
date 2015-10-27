@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="DashPurchasingTf">
+    <default-activity>dashPurchasingHome</default-activity>
+    <view id="dashPurchasingHome">
+      <page>/com.bio.DashboardPurchasing/pages/dashPurchasingHome.amx</page>
+    </view>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>

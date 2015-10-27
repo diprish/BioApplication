@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="com.bio.Home" name="Home">
+    <adfmf:content id="com.bio.Home.1">
+      <adfmf:amx file="com.bio.Home/HomeTf.xml#HomeTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.Dashboard" name="Dashboard">
+    <adfmf:content id="com.bio.Dashboard.1">
+      <adfmf:amx file="com.bio.Dashboard/DashboardTf.xml#DashboardTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.Reports" name="Reports">
+    <adfmf:content id="com.bio.Reports.1">
+      <adfmf:amx file="com.bio.Reports/ReportsTf.xml#ReportsTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.DashboardFinancials" name="DashboardFinancials">
+    <adfmf:content id="com.bio.DashboardFinancials.1">
+      <adfmf:amx file="com.bio.DashboardFinancials/DashFinancialsTf.xml#DashFinancialsTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.DashboardManufacturing" name="DashboardManufacturing">
+    <adfmf:content id="com.bio.DashboardManufacturing.1">
+      <adfmf:amx file="com.bio.DashboardManufacturing/DashManufacturingTf.xml#DashManufacturingTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.DashboardPurchasing" name="DashboardPurchasing">
+    <adfmf:content id="com.bio.DashboardPurchasing.1">
+      <adfmf:amx file="com.bio.DashboardPurchasing/DashPurchasingTf.xml#DashPurchasingTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.DashboardSales" name="DashboardSales">
+    <adfmf:content id="com.bio.DashboardSales.1">
+      <adfmf:amx file="com.bio.DashboardSales/DashSalesTf.xml#DashSalesTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.ReportsFinancials" name="ReportsFinancials">
+    <adfmf:content id="com.bio.ReportsFinancials.1">
+      <adfmf:amx file="com.bio.ReportsFinancials/ReportsFinancialsTf.xml#ReportsFinancialsTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.ReportsManufacturing" name="ReportsManufacturing">
+    <adfmf:content id="com.bio.ReportsManufacturing.1">
+      <adfmf:amx file="com.bio.ReportsManufacturing/ReportsManufacturingTf.xml#ReportsManufacturingTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.ReportsPurchasing" name="ReportsPurchasing">
+    <adfmf:content id="com.bio.ReportsPurchasing.1">
+      <adfmf:amx file="com.bio.ReportsPurchasing/ReportsPurchasingTf.xml#ReportsPurchasingTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.bio.ReportsSales" name="ReportsSales">
+    <adfmf:content id="com.bio.ReportsSales.1">
+      <adfmf:amx file="com.bio.ReportsSales/ReportsSalesTf.xml#ReportsSalesTf"/>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

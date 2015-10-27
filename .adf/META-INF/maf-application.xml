@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="BioApplication" id="com.company.BioApplication"
+                   appControllerFolder="ApplicationController"
+                   listener-class="com.bio.application.LifeCycleListenerImpl">
+  <adfmf:featureReference refId="com.bio.Home" id="fr1"/>
+  <adfmf:featureReference refId="com.bio.Dashboard" id="fr2"/>
+  <adfmf:featureReference refId="com.bio.Reports" id="fr3"/>
+  <adfmf:featureReference refId="com.bio.DashboardFinancials" id="fr4"/>
+  <adfmf:featureReference refId="com.bio.DashboardManufacturing" id="fr5"/>
+  <adfmf:featureReference refId="com.bio.DashboardPurchasing" id="fr6"/>
+  <adfmf:featureReference refId="com.bio.DashboardSales" id="fr7"/>
+  <adfmf:featureReference refId="com.bio.ReportsFinancials" id="fr8"/>
+  <adfmf:featureReference refId="com.bio.ReportsManufacturing" id="fr9"/>
+  <adfmf:featureReference refId="com.bio.ReportsPurchasing" id="fr10"/>
+  <adfmf:featureReference refId="com.bio.ReportsSales" id="fr11"/>
+</adfmf:application>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="HomeTf">
+    <default-activity>home</default-activity>
+    <view id="home">
+      <page>/com.bio.Home/pages/home.amx</page>
+    </view>
+    <task-flow-call id="DashboardTf">
+      <task-flow-reference>
+        <document>/com.bio.Dashboard/DashboardTf.xml</document>
+        <id>DashboardTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="ReportsTf">
+      <task-flow-reference>
+        <document>/com.bio.Reports/ReportsTf.xml</document>
+        <id>ReportsTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>home</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>toReports</from-outcome>
+        <to-activity-id>ReportsTf</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>toDashboard</from-outcome>
+        <to-activity-id>DashboardTf</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>

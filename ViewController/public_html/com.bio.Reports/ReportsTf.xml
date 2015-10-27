@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="ReportsTf">
+    <default-activity>reportsRt</default-activity>
+    <router id="reportsRt">
+      <default-outcome>toReportSales</default-outcome>
+    </router>
+    <task-flow-call id="ReportsFinancialsTf">
+      <task-flow-reference>
+        <document>/com.bio.ReportsFinancials/ReportsFinancialsTf.xml</document>
+        <id>ReportsFinancialsTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="ReportsManufacturingTf">
+      <task-flow-reference>
+        <document>/com.bio.ReportsManufacturing/ReportsManufacturingTf.xml</document>
+        <id>ReportsManufacturingTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="ReportsPurchasingTf">
+      <task-flow-reference>
+        <document>/com.bio.ReportsPurchasing/ReportsPurchasingTf.xml</document>
+        <id>ReportsPurchasingTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="ReportsSalesTf">
+      <task-flow-reference>
+        <document>/com.bio.ReportsSales/ReportsSalesTf.xml</document>
+        <id>ReportsSalesTf</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>reportsRt</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>toReportsFinancials</from-outcome>
+        <to-activity-id>ReportsFinancialsTf</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>toReportsManufacturing</from-outcome>
+        <to-activity-id>ReportsManufacturingTf</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>toReportsPurchasing</from-outcome>
+        <to-activity-id>ReportsPurchasingTf</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>toReportSales</from-outcome>
+        <to-activity-id>ReportsSalesTf</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>
